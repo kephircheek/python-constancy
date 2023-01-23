@@ -64,5 +64,3 @@ Sorting like `list.sort`
 >>> list(DAYS)
 ['SUN', 'SAT', 'FRI', 'THU', 'WED', 'TUE', 'MON']
 ```
-
-Copability with `python2` and `python3`
