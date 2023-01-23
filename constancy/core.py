@@ -5,19 +5,19 @@ Core module of 'constancy'.
 from collections import OrderedDict
 from copy import deepcopy
 
+
 class Constants(object):
     """Immutable container of constant."""
 
-    __slots__ = ('__dict__')
+    __slots__ = "__dict__"
 
     def __init__(self, **kwargs):
 
         if list(filter(lambda x: not x.isupper(), kwargs)):
-            raise AttributeError('Name of constant should be uppercase.')
+            raise AttributeError("Name of constant should be uppercase.")
 
         super(Constants, self).__setattr__(
-            '__dict__',
-            OrderedDict(map(lambda x: (x[0], deepcopy(x[1])), kwargs.items()))
+            "__dict__", OrderedDict(map(lambda x: (x[0], deepcopy(x[1])), kwargs.items()))
         )
 
     def sort(self, key=None, reverse=False):
@@ -27,14 +27,8 @@ class Constants(object):
         """
 
         super(Constants, self).__setattr__(
-            '__dict__',
-            OrderedDict(
-                sorted(
-                    self.__dict__.items(),
-                    key=key,
-                    reverse=reverse
-                )
-            )
+            "__dict__",
+            OrderedDict(sorted(self.__dict__.items(), key=key, reverse=reverse)),
         )
 
     def __getitem__(self, name):
@@ -63,7 +57,7 @@ class Constants(object):
         return str(list(self))
 
     def __repr__(self):
-        return '<%s: %s>' % (self.__class__.__name__, str(self.__dict__))
+        return "<%s: %s>" % (self.__class__.__name__, str(self.__dict__))
 
     def __dir__(self):
         return list(self)
@@ -94,7 +88,8 @@ class Constants(object):
         return self.__dict__[key]
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     DAYS = Constants(MON=1, TUE=2, WED=3, THU=4, FRI=5, SAT=6, SUN=7)
-    import doctest; doctest.testmod(extraglobs=DAYS)
+    import doctest
 
+    doctest.testmod(extraglobs=DAYS)
