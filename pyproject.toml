@@ -1,0 +1,23 @@
+[project]
+name = "constancy"
+description = "Container for constants."
+version = "0.1.0"
+authors = [
+    { name = "Ilia Lazarev", email = "the.ilia.lazarev@gmail.com" }
+]
+readme = "README.md"
+
+[project.urls]
+"Homepage" = "https://github.com/kephircheek/python-constancy"
+
+[project.optional-dependencies]
+dev = [
+    "isort[colors]==5.11.4",
+    "black==22.12.0",
+]
+
+[tool.black]
+line-length = 90
+
+[tool.isort]
+profile = "black"
