@@ -22,7 +22,7 @@ Create container for constants
 ...     FRI=4,
 ...     SAT=5,
 ...     SUN=6
-... )   
+... )
 ```
 
 Get value from container
@@ -30,13 +30,13 @@ Get value from container
 >>> DAYS.MON
 0
 >>> DAYS['MON']
-0  
+0
 ```
 
 Represent with pure python data structures
 ```python
 >>> list(DAYS)
-['WED', 'SUN', 'FRI', 'THU', 'MON', 'TUE', 'SAT']
+['MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT', 'SUN']
 >>> dict(DAYS)
 {'WED': 2, 'SUN': 6, 'FRI': 4, 'THU': 3, 'MON': 0, 'TUE': 1, 'SAT': 5}
 ```
@@ -47,7 +47,7 @@ All constants are immutable
 ...
 AttributeError: Immutable attribute
 
->>> del DAYS.MON 
+>>> del DAYS.MON
 ...
 AttributeError: Immutable attribute
 ```
@@ -60,7 +60,7 @@ Autocomplete only for constants
 
 Sorting like `list.sort`
 ```python
->>> DAYS.sort(key=lambda (k, v): v, reverse=True)
+>>> DAYS.sort(key=lambda k, v: v, reverse=True)
 >>> list(DAYS)
 ['SUN', 'SAT', 'FRI', 'THU', 'WED', 'TUE', 'MON']
 ```
