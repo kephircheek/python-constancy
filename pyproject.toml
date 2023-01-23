@@ -1,7 +1,7 @@
 [project]
 name = "constancy"
 description = "Container for constants."
-version = "0.1.0"
+version = "0.3.0"
 authors = [
     { name = "Ilia Lazarev", email = "the.ilia.lazarev@gmail.com" }
 ]
