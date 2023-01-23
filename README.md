@@ -1,4 +1,4 @@
-# python-constants
+# python-constancy
 Container for constants.
 
 ![test](https://github.com/kephircheek/python-constancy/actions/workflows/main.yml/badge.svg)
@@ -7,7 +7,7 @@ Container for constants.
 
 **Installing**
 ```bash
-pip install git+https://github.com/kephircheek/python-constants.git
+pip install constancy
 ```
 
 **Example:**
