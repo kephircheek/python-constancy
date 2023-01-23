@@ -2,6 +2,7 @@
 Container for constants.
 
 ![test](https://github.com/kephircheek/python-constancy/actions/workflows/main.yml/badge.svg)
+[![PyPI version](https://badge.fury.io/py/constancy.svg)](https://badge.fury.io/py/constancy)
 [![license: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 
